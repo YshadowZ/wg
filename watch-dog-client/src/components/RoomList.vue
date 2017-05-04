@@ -3,6 +3,7 @@
     <div class="logo-container">
       <img src="../../static/logoSmall.svg" alt="" class="logo">
     </div>
+    <div v-on:click="quit" class="quit">退出</div>
     <div class="info-container">
       <img src="../../static/avatar.svg" alt="" class="avatar">
       <div class="user-info">
@@ -30,7 +31,10 @@
       }
     },
     methods: {
-
+      quit() {
+        localStorage.removeItem('userid')
+        this.$router.replace('/login')
+      }
     },
     created() {
       console.log(window.me)
@@ -40,6 +44,11 @@
 </script>
 
 <style scoped>
+  .quit {
+    color: gray;
+    font-weight: bold;
+    cursor: pointer;
+  }
   .avatar {
     width: 48px;
     margin-left: 40px;

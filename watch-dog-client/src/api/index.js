@@ -1,4 +1,4 @@
-const domain = 'http://10.8.1.44:3000';
+const domain = 'http://10.8.8.8:9900';
 
 const APIs = {
   POST_SIGNUP: '/signup',

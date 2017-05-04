@@ -215,7 +215,7 @@ export default {
           break
         }
       }
-      return week.blocks.slice(low + 1, high)
+      return week.blocks.slice(low + 1, high + 1)
     }
   },
   created() {
